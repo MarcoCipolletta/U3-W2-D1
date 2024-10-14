@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { iPost } from '../../Modules/i-post';
 
 @Component({
@@ -8,4 +8,9 @@ import { iPost } from '../../Modules/i-post';
 })
 export class CardComponent {
   @Input() post!: iPost;
+  @Output() onFormRequest = new EventEmitter<number>();
+
+  openForm(id: number) {
+    this.onFormRequest.emit(id);
+  }
 }

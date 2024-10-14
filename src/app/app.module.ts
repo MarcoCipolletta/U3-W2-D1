@@ -10,6 +10,7 @@ import { InactivePostsComponent } from './pages/inactive-posts/inactive-posts.co
 import { PostDetailComponent } from './pages/post-detail/post-detail.component';
 import { NavbarComponent } from './main-components/navbar/navbar.component';
 import { CardComponent } from './components/card/card.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { CardComponent } from './components/card/card.component';
     NavbarComponent,
     CardComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
